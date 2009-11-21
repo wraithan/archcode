@@ -4,6 +4,9 @@ class Status(models.Model):
    # Status of the contest.
    name = models.CharField('Status', max_length = 100)
 
+   class Meta:
+      verbose_name_plural = "Statuses"
+
    def __unicode__(self):
       return self.name
 
