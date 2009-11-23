@@ -1,5 +1,6 @@
 *.pyo
 *.pyc
 *.swp
+*~
 settings.py
 db/REAL_DB
