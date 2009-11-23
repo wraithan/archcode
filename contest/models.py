@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 from django.db import models
 
 class Status(models.Model):
@@ -12,8 +13,8 @@ class Status(models.Model):
 
 class Contest(models.Model):
    title = models.CharField('Contest Title', max_length = 200)
-   starts = models.DateTimeField('Start Date', auto_now = True, auto_now_add = True)
-   ends = models.DateTimeField('End Date', auto_now = True, auto_now_add = True)
+   starts = models.DateTimeField('Start Date', default = datetime.now)
+   ends = models.DateTimeField('End Date', default = lambda: datetime.now() + timedelta(days=7))
    status = models.ForeignKey(Status)
    summary = models.TextField('Contest Details')
 
