@@ -5,8 +5,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^archcode/', include('archcode.foo.urls')),
+    (r'^$', 'archcode.challenge.views.index'),
+    (r'^challenge/(?P<challenge_id>\d+)/$', 'archcode.challenge.views.details'),
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:

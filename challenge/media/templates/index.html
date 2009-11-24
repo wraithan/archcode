@@ -1,0 +1,10 @@
+{% if challenges %}
+    <ul>
+    {% for challenge in challenges %}
+        <li>{{ challenge.title }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No challenges are available.</p>
+{% endif %}
+
