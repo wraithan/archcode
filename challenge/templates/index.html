@@ -2,7 +2,7 @@ Current Challenges
 {% if current_challenges %}
     <ul>
     {% for challenge in current_challenges %}
-        <li>{{ challenge.title }}</li>
+        <li><a href="{{ challenge.get_absolute_url }}">{{ challenge.title }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
@@ -13,7 +13,7 @@ Past Challenges
 {% if past_challenges %}
     <ul>
     {% for challenge in past_challenges %}
-        <li>{{ challenge.title }}</li>
+        <li><a href="{{ challenge.get_absolute_url }}">{{ challenge.title }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
