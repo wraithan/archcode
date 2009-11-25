@@ -5,14 +5,14 @@ from datetime import datetime
 
 def index(request):
     try:
-        currentChallenges = Challenge.objects.exclude(ends__lte=datetime.now).filter(starts__lte=datetime.now)
+        current_challenges = Challenge.objects.exclude(ends__lte=datetime.now).filter(starts__lte=datetime.now)
     except Challenge.DoesNotExist:
-        currentChallenges = None
+        current_challenges = None
     try:
-        pastChallenges = Challenge.objects.filter(ends__lte=datetime.now)
+        past_challenges = Challenge.objects.filter(ends__lte=datetime.now)
     except Challenge.DoesNotExist:
-        pastChallenges = None
-    return render_to_response('index.html', {'currentChallenges': currentChallenges,'pastChallenges': pastChallenges})
+        past_challenges = None
+    return render_to_response('index.html', {'current_challenges': current_challenges,'past_challenges': past_challenges})
 
 def details(request, challenge_id):
     challenge = get_object_or_404(Challenge, pk=challenge_id)

@@ -1,8 +1,8 @@
 Current Challenges
-{% if currentChallenges %}
+{% if current_challenges %}
     <ul>
-    {% for currentChallenge in currentChallenges %}
-        <li>{{ currentChallenge.title }}</li>
+    {% for challenge in current_challenges %}
+        <li>{{ challenge.title }}</li>
     {% endfor %}
     </ul>
 {% else %}
@@ -10,10 +10,10 @@ Current Challenges
 {% endif %}
 
 Past Challenges
-{% if pastChallenges %}
+{% if past_challenges %}
     <ul>
-    {% for pastChallenge in pastChallenges %}
-        <li>{{ pastChallenge.title }}</li>
+    {% for challenge in past_challenges %}
+        <li>{{ challenge.title }}</li>
     {% endfor %}
     </ul>
 {% else %}
