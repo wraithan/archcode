@@ -8,7 +8,11 @@ def index(request):
         currentChallenges = Challenge.objects.exclude(ends__lte=datetime.now).filter(starts__lte=datetime.now)
     except Challenge.DoesNotExist:
         currentChallenges = None
-    return render_to_response('index.html', {'challenges': currentChallenges})
+    try:
+        pastChallenges = Challenge.objects.filter(ends__lte=datetime.now)
+    except Challenge.DoesNotExist:
+        pastChallenges = None
+    return render_to_response('index.html', {'currentChallenges': currentChallenges,'pastChallenges': pastChallenges})
 
 def details(request, challenge_id):
     challenge = get_object_or_404(Challenge, pk=challenge_id)

@@ -1,10 +1,22 @@
-{% if challenges %}
+Current Challenges
+{% if currentChallenges %}
     <ul>
-    {% for challenge in challenges %}
-        <li>{{ challenge.title }}</li>
+    {% for currentChallenge in currentChallenges %}
+        <li>{{ currentChallenge.title }}</li>
     {% endfor %}
     </ul>
 {% else %}
-    <p>No challenges are available.</p>
+    <p>no challenges are available.</p>
+{% endif %}
+
+Past Challenges
+{% if pastChallenges %}
+    <ul>
+    {% for pastChallenge in pastChallenges %}
+        <li>{{ pastChallenge.title }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>no challenges are available.</p>
 {% endif %}
 
