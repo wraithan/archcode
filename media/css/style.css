@@ -2,24 +2,24 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;cube
+    width: 100%;
     background: #fff url(images/bg.png) repeat-x;
     font: 12px Arial, sans-serif;
     color: #666;
 }
 
 #site {
-    width: 750px;
+    width: 960px;
     margin: 0 auto 0 auto;
     background-image: url(images/shadow.png);
 }
 
 #header {
-    width: 670px;
+    width: 920px;
     height: 120px;
     background: url(images/logo.png) no-repeat;
-    background-position: 40px;
-    line-height: 85px;
+    background-position: 30px;
+    line-height: 120px;
 }
 
 #title {
@@ -37,13 +37,13 @@ body {
 }
 
 span {
-    color: #256da8;
+    color: #38a5ff;
 }
 
 #navigation {
-    width: 670px;
+    width: 900px;
     height: 24px;
-    margin: 0 40px 0 40px;
+    margin: 0 30px 0 30px;
     background-color: #38a5ff;
     border-bottom: 1px solid #fff;
 }
@@ -73,28 +73,31 @@ span {
 }
 
 #content {
-    width:670px;
-    padding: 20px 40px 0 40px;
+    padding: 0 30px 0 30px;
     margin: 0;
     height: auto;
 }
 
 #main {
-    width: 450px;
+    width: 720px;
     float: left;
 }
 
 #main hr {
-    border: none 0;
-    border-top: 1px solid #666;
-    margin: 0 0 0 25px;
+    border: 0;
+    border-top: 2px dotted #ccc;
+    margin: 0;
     height: 1px;
 }
 
+#main ul {
+    padding: 0 0 10px 0px;
+}
+
 #main p {
-    line-height: 19px;
+    line-height: 18px;
     color: #666;
-    margin: 0 0 20px 25px;
+    margin: 0 0 20px 0;
 }
 
 #main p a, #right p a {
@@ -113,32 +116,42 @@ span {
 
 #main img {
     background-color: #38a5ff;
-    padding: 3px;
+    padding: 2px;
     border: 1px solid #256da8;
 }
 
-#main .quote {
+#main .block {
     border: 1px solid #38a5ff;
     background-color: #eee;
-    padding: 15px 15px 15px 65px;
+    color: #256da8;
+}
+
+#quote {
     background-image: url(images/quote.png);
     background-repeat: no-repeat;
-    background-position: 10px;
-    color: #256da8;
+    background-position: 10px 10px;
+    padding: 15px 15px 15px 15px;
+    text-indent: 35px;
     font-size: 14px;
     font-style: italic;
 }
 
+#code {
+    padding: 15px;
+    font-family: monospace;
+    font-size: 12px;
+}
+
 #right {
-    width: 175px;
-    margin-left: 480px;
+    width: 160px;
+    margin: 0 0 0 740px;
 }
 
 #right p {
-    line-height: 17px;
+    line-height: 20px;
     font-size: 11px;
     color: #666;
-    margin: 0 0 15px 10px;
+    margin: 0 0 15px 0;
 }
 
 #footer {
@@ -166,29 +179,29 @@ h1 {
     font-size: 22px;
     color: #666;
     margin: 0;
-    padding: 0 0 20px 25px;
+    padding: 0 0 20px 0;
     line-height: 24px;
 }
 
 h2 {
     font-size: 16px;
-    color: #256da8;
-    padding: 5px 0 5px 25px;
+    color: #38a5ff;
+    padding: 5px 0 5px 0;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 h3 {
     font-size: 14px;
-    color: #256da8;
-    padding: 5px 0 0 25px;
+    color: #38a5ff;
+    padding: 5px 0 0 0;
     text-transform: uppercase;
     letter-spacing: -0.5px;
     }
 
 h4 {
     font-size: 14px;
-    color: #256da8;
+    color: #38a5ff;
     text-transform: uppercase;
     letter-spacing: -0.5px;
     }
