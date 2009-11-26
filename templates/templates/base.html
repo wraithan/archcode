@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <title>#archlinux-code</title>
-        <meta http-equiv="content-type" content="text/html; utf-8" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="author" content="Michael Fiano (axionix@gmail.com)" />
         <meta name="description" content="Arch Linux coding community" />
         <meta name="Robots" content="index,follow" />
@@ -28,55 +28,13 @@
                     <h1>Welcome to #archlinux-<span>code</span></h1>
                     <p>This is some text.</p>
                     <h2>This is a headline</h2>
-                    <p><img src="images/archlinux.png" alt="This is an image" class="left" width="300px" />This is an image with a right-aligned description. The image description will flow around the image nicely if the text is long enough.</p></p>
-                    <p><img src="images/archlinux.png" alt="This is an image" class="right" width="300px" />This is an image with a left-aligned description. The image description will flow around the image nicely if the text is long enough.</p></p>
+                    <p><img src="images/archlinux.png" alt="This is an image" class="left" width="300px" />This is an image with a right-aligned description. The image description will flow around the image nicely if the text is long enough.</p>
+                    <p><img src="images/archlinux.png" alt="This is an image" class="right" width="300px" />This is an image with a left-aligned description. The image description will flow around the image nicely if the text is long enough.</p>
                     <h3>This is a sub-headline</h3>
                     <p>This is some text with a <a href="#">link</a>.</p>
-                    <p class="block" id="quote">This is a quote.<br>more</br></p>
+                    <p class="block" id="quote">This is a quote.<br />more</p>
                     <p class="block" id="code">
-
-
-from random import choice<br />
-from constants import *<br />
-from dice import Die<br />
-from monsters import *<br />
-<br />
-class Battle(object):<br />
-    """A battle has started."""<br />
-<br />
-    def __init__(self, screen):<br />
-        self.screen = screen<br />
-        self.map = screen.map<br />
-        self.region = int(screen.player.current_region)<br />
-        self.region_monsters = MONSTER_DICT[self.region]<br />
-        self.temp_monsters = []<br />
-        self.battle_monsters = []<br />
-        self.create_monsters()<br />
-        self.show_debug()<br />
-<br />
-    def create_monsters(self):<br />
-        """Randomly create the monsters for the battle."""<br />
-<br />
-        # Create a list of monster instances for the current region.<br />
-        for monster in self.region_monsters:<br />
-            self.temp_monsters.append(monster(self))<br />
-<br />
-        # Randomly select 1-4 regional monsters.<br />
-        num = Die(MONSTERS_MAX_AMOUNT).roll()<br />
-        while len(self.battle_monsters) < num:<br />
-            monster = choice(self.temp_monsters)<br />
-            if self.battle_monsters.count(monster) < monster.max_amount:<br />
-                self.battle_monsters.append(monster)<br />
-<br />
-    def show_debug(self):<br />
-        """Print the battle debug message."""<br />
-<br />
-        if SHOW_MONSTERS:<br />
-            print "A battle has started on region #" + str(self.region) + (" with:")<br />
-            for monster in self.battle_monsters:<br />
-                print monster.name<br />
-
-
+                        from random import choice
                     </p>
                     <h3>This is a list</h3>
                     <p>Web Design</p>
@@ -105,7 +63,7 @@ class Battle(object):<br />
             </div>
 
             <div id="footer">
-                &copy; 2009 archlinux-code. Use of this site constitutes acceptance of our <a href="#">License Agreement</a>. Source available on <a href="http://github.com/CodeBlock/ArchLinux-Code-Website">GitHub</a>. The Arch Linux name and logo are recognized trademarks.</a>
+                &copy; 2009 archlinux-code. Use of this site constitutes acceptance of our <a href="#">License Agreement</a>. Source available on <a href="http://github.com/CodeBlock/ArchLinux-Code-Website">GitHub</a>. The Arch Linux name and logo are recognized trademarks.
             </div>
 
         </div>
