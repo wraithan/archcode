@@ -7,7 +7,7 @@ relpath = lambda *x: os.path.join(os.path.abspath(os.path.dirname(__file__)), *x
 urlpatterns = patterns('',
     (r'^$', 'archcode.challenge.views.index'),
     (r'^challenge/(?P<challenge_id>\d+)/$', 'archcode.challenge.views.details'),
-    (r'^media/(?P<path>.*)$', 'django.views.static.serve',{'document_root': relpath('challenge/media/')}),
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve',{'document_root': relpath('media/')}),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
