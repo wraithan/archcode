@@ -35,6 +35,7 @@ html, body {
 
 #subtitle {
     float: right;
+    margin-right: -30px;
     font-size: 18px;
     font-style: italic;
 }
@@ -85,7 +86,7 @@ span {
     margin-left: 30px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 265px;
+    padding-bottom: 238px;
 }
 
 #content li {
@@ -198,6 +199,13 @@ span {
     margin-bottom: 15px;
 }
 
+#right hr {
+    border: 0;
+    border-top: 1px dotted #ccc;
+    height: 1px;
+    margin-right: -10px;
+}
+
 #footer {
     background-color: #fff;
     position: absolute;
@@ -206,12 +214,12 @@ span {
     clear: both;
     border-top: 3px solid #38a5ff;
     width: 900px;;
-    height: 48px;
+    height: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: auto;
     text-align: center;
-    font-size: 11px;
+    font-size: 10px;
     color: #aaa;
     z-index: 2;
 }
@@ -256,12 +264,6 @@ h4 {
     text-transform: uppercase;
     letter-spacing: -0.5px;
     }
-
-hr {
-    border: 0;
-    border-top: 1px dotted #ccc;
-    height: 1px;
-}
 
 #news {
     padding: 0;
