@@ -1,4 +1,8 @@
-<div class="challenge_header">{{ challenge.title }}</div>
-<div class="challenge_starts">{{ challenge.starts }}</div>
-<div class="challenge_ends">{{ challenge.ends }}</div>
-<pre class="challenge_summary">{{ challenge.summary }}</pre>
+{% extends "base.html" %}
+
+{% block challenge %}
+    <h2>{{ challenge.title }}</h2>
+    <h4>{{ challenge.starts }}</h4>
+    <h4>{{ challenge.ends }}</h4>
+    <p>{{ challenge.summary }}</p>
+{% endblock %}
