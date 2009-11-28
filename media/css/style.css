@@ -8,15 +8,16 @@ html, body {
 }
 
 #site {
+    position: relative;
+    min-height: 100%;
     width: 960px;
     height: auto;
-    min-height: 100%;
     margin: 0 auto;
     background-image: url(/media/images/shadow.png);
 }
 
 #header {
-    width: 920px;
+    width: 900px;
     height: 120px;
     background: url(/media/images/logo.png) no-repeat;
     background-position: 30px;
@@ -75,9 +76,14 @@ span {
 }
 
 #content {
-    height: auto;
-    padding: 0 30px 0 30px;
-    margin-left: 15px;
+    border-right: 3px solid #38a5ff;
+    width: 685px;
+    height: 100%;
+    margin-top: 15px;
+    margin-left: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 265px;
 }
 
 #content li {
@@ -91,9 +97,7 @@ span {
 
 #main {
     width: 685px;
-    float: left;
-    border-right: 3px solid #38a5ff;
-    padding-right: 15px;
+    height: 100%;
     margin-bottom: 15px;
 }
 
@@ -177,7 +181,10 @@ span {
 }
 
 #right {
-    width: 170px;
+    position: absolute;
+    right: 0px;
+    top: 145px;
+    width: 185px;
     margin: 0 0 0 725px;
 }
 
@@ -192,15 +199,21 @@ span {
 }
 
 #footer {
+    background-color: #fff;
+    position: absolute;
+    left: 30px;
+    bottom: 0;
     clear: both;
-    border-top: 2px solid #ddd;
-    width: 670px;
+    border-top: 3px solid #38a5ff;
+    width: 900px;;
+    height: 48px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: auto;
     text-align: center;
     font-size: 11px;
     color: #aaa;
+    z-index: 2;
 }
 
 #footer a {
