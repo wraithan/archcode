@@ -1,16 +1,17 @@
-body {
+html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
-    background: #fff url(/media/images/bg.png) repeat-x;
     font: 12px Arial, sans-serif;
     color: #666;
 }
 
 #site {
     width: 960px;
-    margin: 0 auto 0 auto;
+    height: auto;
+    min-height: 100%;
+    margin: 0 auto;
     background-image: url(/media/images/shadow.png);
 }
 
@@ -74,9 +75,9 @@ span {
 }
 
 #content {
+    height: auto;
     padding: 0 30px 0 30px;
     margin: 0;
-    height: auto;
 }
 
 #content li {
@@ -85,7 +86,7 @@ span {
     background-repeat: no-repeat;
     background-position: 0 3px;
     padding: 0 0 0 15px;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 #main {
@@ -101,7 +102,8 @@ span {
 }
 
 #main ul {
-    padding: 0 0 10px 0px;
+    padding: 0;
+    padding-bottom: 10px;
 }
 
 #main p {
@@ -130,17 +132,29 @@ span {
     border: 1px solid #256da8;
 }
 
-#main .block {
+.block {
+    margin-bottom: 15px;
     border: 1px solid #38a5ff;
     background-color: #eee;
     color: #256da8;
+}
+
+#message {
+    color: #38a5ff;
+    width: 868px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 5px 15px 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 #quote {
     background-image: url(/media/images/quote.png);
     background-repeat: no-repeat;
     background-position: 10px 10px;
-    padding: 15px 15px 15px 15px;
+    padding: 15px;
     text-indent: 35px;
     font-size: 14px;
     font-style: italic;
@@ -161,16 +175,20 @@ span {
     line-height: 20px;
     font-size: 11px;
     color: #666;
-    margin: 0 0 15px 0;
+}
+
+#right ul {
+    margin-bottom: 15px;
 }
 
 #footer {
+    clear: both;
     border-top: 2px solid #ddd;
     width: 670px;
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: auto;
     text-align: center;
-    clear: both;
     font-size: 11px;
     color: #aaa;
 }
@@ -189,7 +207,7 @@ h1 {
     font-size: 22px;
     color: #666;
     margin: 0;
-    padding: 0 0 20px 0;
+    padding: 0 0 10px 0;
     line-height: 24px;
 }
 

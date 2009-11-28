@@ -22,8 +22,11 @@
                 </ul>
             </div>
 
-            <div id="content">
+            {% if message %}
+                   <div class="block" id="message">{{ message }}</div>
+            {% endif %}
 
+            <div id="content">
                 <div id="main">
                     <h1>{{ title }}</h1>
                     {% block content %}{% endblock %}
@@ -42,7 +45,6 @@
                     #archlinux-code<br />
                     </p>
                 </div>
-
             </div>
 
             <div id="footer">
@@ -50,5 +52,6 @@
             </div>
 
         </div>
+
    </body>
 </html>
