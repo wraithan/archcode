@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from django.db import models
+from django.core.urlresolvers import reverse
 
 CHALLENGE_STATUS_CHOICES = (
     ('NW', 'New'),
@@ -20,5 +21,5 @@ class Challenge(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return "/challenge/%i/" % self.id
+        return reverse('challenge-details', args=[self.id,])
 
