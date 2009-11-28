@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title>#archlinux-code</title>
+        <title>#archlinux-code: {{ title }}</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="author" content="Michael Fiano (axionix@gmail.com)" />
         <meta name="description" content="Arch Linux coding community" />
         <meta name="Robots" content="index,follow" />
-        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link href="/media/css/style.css" rel="stylesheet" type="text/css" />
    </head>
    <body>
         <div id="site">
@@ -25,25 +25,7 @@
             <div id="content">
 
                 <div id="main">
-                    <h1>Welcome to #archlinux-<span>code</span></h1>
-                    <p>This is some text.</p>
-                    <h2>This is a headline</h2>
-                    <p><img src="images/archlinux.png" alt="This is an image" class="left" width="300px" />This is an image with a right-aligned description. The image description will flow around the image nicely if the text is long enough.</p>
-                    <p><img src="images/archlinux.png" alt="This is an image" class="right" width="300px" />This is an image with a left-aligned description. The image description will flow around the image nicely if the text is long enough.</p>
-                    <h3>This is a sub-headline</h3>
-                    <p>This is some text with a <a href="#">link</a>.</p>
-                    <p class="block" id="quote">This is a quote.<br />more</p>
-                    <p class="block" id="code">
-                        from random import choice
-                    </p>
-                    <h3>This is a list</h3>
-                    <p>Web Design</p>
-                    <ul class="list">
-                        <li>html</li>
-                        <li>css</li>
-                        <li>templating</li>
-                        <li>python</li>
-                    </ul>
+                    {% block content %}{% endblock %}
                 </div>
 
                 <div id="right">

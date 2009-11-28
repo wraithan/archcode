@@ -3,7 +3,7 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
-    background: #fff url(images/bg.png) repeat-x;
+    background: #fff url(/media/images/bg.png) repeat-x;
     font: 12px Arial, sans-serif;
     color: #666;
 }
@@ -11,13 +11,13 @@ body {
 #site {
     width: 960px;
     margin: 0 auto 0 auto;
-    background-image: url(images/shadow.png);
+    background-image: url(/media/images/shadow.png);
 }
 
 #header {
     width: 920px;
     height: 120px;
-    background: url(images/logo.png) no-repeat;
+    background: url(/media/images/logo.png) no-repeat;
     background-position: 30px;
     line-height: 120px;
 }
@@ -78,6 +78,15 @@ span {
     height: auto;
 }
 
+#content li {
+    list-style: none;
+    background-image: url(/media/images/bullet.png);
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+    padding: 0 0 0 15px;
+    margin: 0 0 10px 0;
+}
+
 #main {
     width: 720px;
     float: left;
@@ -100,14 +109,14 @@ span {
     margin: 0 0 20px 0;
 }
 
-#main p a, #right p a {
+#main a, #right p a {
     text-decoration: none;
     color: #256da8;
     border-bottom: 1px dotted #256da8;
     padding: 2px;
 }
 
-#main p a:hover, #right p a:hover  {
+#main a:hover, #right p a:hover  {
     text-decoration: none;
     color: #fff;
     background-color: #256da8;
@@ -127,7 +136,7 @@ span {
 }
 
 #quote {
-    background-image: url(images/quote.png);
+    background-image: url(/media/images/quote.png);
     background-repeat: no-repeat;
     background-position: 10px 10px;
     padding: 15px 15px 15px 15px;
@@ -215,15 +224,6 @@ hr {
 #news {
     padding: 0;
     margin: 0;
-}
-
-.list li {
-    list-style: none;
-    background-image: url(images/bullet.png);
-    background-repeat: no-repeat;
-    background-position: 0 3px;
-    padding: 0 0 0 15px;
-    margin: 0 0 10px 0;
 }
 
 img.left {

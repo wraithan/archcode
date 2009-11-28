@@ -1,22 +1,28 @@
-Current Challenges
-{% if current_challenges %}
-    <ul>
-    {% for challenge in current_challenges %}
-        <li><a href="{{ challenge.get_absolute_url }}">{{ challenge.title }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>no challenges are available.</p>
-{% endif %}
+{% extends "base.html" %}
 
-Past Challenges
-{% if past_challenges %}
-    <ul>
-    {% for challenge in past_challenges %}
-        <li><a href="{{ challenge.get_absolute_url }}">{{ challenge.title }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>no challenges are available.</p>
-{% endif %}
+{% block content %}
 
+    <h1>{{ title }}</h1>
+
+    <h3>Current Challenges</h3>
+    {% if current_challenges %}
+        <ul>
+        {% for challenge in current_challenges %}
+            <li><a href="{{ challenge.get_absolute_url }}">{{ challenge.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>no challenges are available.</p>
+    {% endif %}
+
+    <h3>Past Challenges</h3>
+    {% if past_challenges %}
+        <ul>
+        {% for challenge in past_challenges %}
+           <li><a href="{{ challenge.get_absolute_url }}">{{ challenge.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>no challenges are available.</p>
+    {% endif %}
+{% endblock %}
