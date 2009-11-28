@@ -22,8 +22,12 @@
                 </ul>
             </div>
 
-            {% if message %}
-                   <div class="block" id="message">{{ message }}</div>
+            {% if messages %}
+                <div class="block" id="message">
+                    {% for message in messages %}
+                        {{ message }}<br />
+                    {% endfor %}
+                </div>
             {% endif %}
 
             <div id="content">
