@@ -6,9 +6,7 @@ relpath = lambda *x: os.path.join(os.path.abspath(os.path.dirname(__file__)), *x
 
 urlpatterns = patterns('',
     (r'^$', 'archcode.home.views.index'),
-    (r'^challenge/$', 'archcode.challenge.views.index'),
-    (r'^challenge/(?P<challenge_id>\d+)/$',
-        'archcode.challenge.views.details'),
+    (r'^challenge/', include('archcode.challenge.urls')),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve',
         { 'document_root': relpath('media/') }),
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
