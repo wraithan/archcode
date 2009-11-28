@@ -1,0 +1,16 @@
+-Self registration for users.
+-Submitting of challenge ideas.
+-Voting on challenge ideas.
+-Submitting of challenge solutions.
+-Syntax highlighting for code.
+-API for things like getting current challenges, submitting solutions, even 
+updating the solution... will require lots more thought ideas welcome for each 
+piece.
+-Filtering/searching challenges.
+-Filtering/searching solutions.
+-List of challenges user has solved/not solved.
+-User profiles, containing list of challenge ideas they submitted, and list of
+challenges they've submitted answers for.
+-Add news/activity app for recent challenge ideas/solutions.
+-Figure out how to hook news app in so it gets rendered on in the base.html 
+without having to mention it in the view... probably via middleware.
