@@ -14,3 +14,4 @@ challenges they've submitted answers for.
 -Add news/activity app for recent challenge ideas/solutions.
 -Figure out how to hook news app in so it gets rendered on in the base.html 
 without having to mention it in the view... probably via middleware.
+-Write fabric script for deploying to the server
