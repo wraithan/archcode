@@ -10,8 +10,10 @@ CHALLENGE_STATUS_CHOICES = (
 class Challenge(models.Model):
     title = models.CharField('Challenge Title', max_length = 200)
     starts = models.DateTimeField('Start Date', default = datetime.now)
-    ends = models.DateTimeField('End Date', default = lambda: datetime.now() + timedelta(days=7))
-    status = models.CharField('Challenge Status', max_length = 2, choices=CHALLENGE_STATUS_CHOICES)
+    ends = models.DateTimeField('End Date', default = lambda: datetime.now() +
+        timedelta(days=7))
+    status = models.CharField('Challenge Status', max_length = 2,
+        choices=CHALLENGE_STATUS_CHOICES)
     summary = models.TextField('Challenge Details')
 
     def __unicode__(self):

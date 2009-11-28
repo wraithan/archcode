@@ -5,7 +5,7 @@ from datetime import datetime
 
 def index(request):
     title = "Challenges"
-    message = "This is a message."
+    message = False
     current_challenges = Challenge.objects.exclude(ends__lte=datetime.now).filter(starts__lte=datetime.now)
     past_challenges = Challenge.objects.filter(ends__lte=datetime.now)
     return render_to_response('challenge/index.html', {
