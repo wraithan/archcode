@@ -86,7 +86,7 @@ span {
     margin-left: 30px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 238px;
+    padding-bottom: 50px;
 }
 
 #content li {
@@ -214,12 +214,12 @@ span {
     clear: both;
     border-top: 3px solid #38a5ff;
     width: 900px;;
-    height: 20px;
+    height: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: auto;
     text-align: center;
-    font-size: 10px;
+    font-size: 11px;
     color: #aaa;
     z-index: 2;
 }
