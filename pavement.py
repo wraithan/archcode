@@ -7,9 +7,8 @@ easy_install = base + '/bin/easy_install'
 
 libraries = [
     ('django', ''),
-    ('django_registration', '-Z'),
+    ('http://bitbucket.org/ubernostrum/django-registration/get/tip.zip', '-Z'),
 ]
-
 options(
     virtualenv=Bunch(
         script_name='bootstrap.py',
