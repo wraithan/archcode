@@ -1125,9 +1125,7 @@ def after_install(options, home_dir):
     else:
         bin_dir = join(home_dir, 'bin')
     subprocess.call([join(bin_dir, 'easy_install'), 'paver==1.0.1'])
-    subprocess.call([join(bin_dir, 'easy_install'), 'Django'])
-    subprocess.call([join(bin_dir, 'easy_install'), 'django-registration'])
-
+    subprocess.call([join(bin_dir, 'paver'),'update_libraries'])
 
 ##file site.py
 SITE_PY = """
