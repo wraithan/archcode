@@ -1,0 +1,16 @@
+Our development environment now depends on virtualenv and paver. Both of
+which can easily be installed via easy_install or via AUR from aur/virtualenv
+and aur/python-paver. This is to simplify the build process as we gain more 
+dependencies. django-registration is our first/only dependency right now but
+likely I will be adding django-profile and down the line we will see what
+else is needed.
+
+The following steps will get your virtualenv setup and started:
+
+python bootstrap.py
+. bin/activate
+
+The first line will install all dependencies and make the virualenv if it
+doesn't exist. The second line activates the virtualenv so that packages
+installed while in virtualenv are accessible. You can leave virtualenv with
+a simple 'deactivate' 

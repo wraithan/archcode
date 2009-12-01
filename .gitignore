@@ -4,3 +4,7 @@
 *~
 settings.py
 db/REAL_DB
+bin/*
+lib/*
+lib64
+include/*
