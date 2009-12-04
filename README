@@ -1,9 +1,7 @@
-Our development environment now depends on virtualenv and paver. Both of
-which can easily be installed via easy_install or via AUR from aur/virtualenv
-and aur/python-paver. This is to simplify the build process as we gain more 
-dependencies. django-registration is our first/only dependency right now but
-likely I will be adding django-profile and down the line we will see what
-else is needed.
+I have setup a paver script to create a virtualenv and install all needed
+dependencies. You do not need paver or virtualenv to use this script as it
+will set those up for you. If you want to change the paver script though, you
+are going to need to have paver installed.
 
 The following steps will get your virtualenv setup and started:
 
