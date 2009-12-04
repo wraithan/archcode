@@ -1,10 +1,13 @@
 {% extends "base.html" %}
-
+{% if form.errors %}
+<p>death</p>
+{% endif %}
 {% block content %}
 <form>
 <table>
     {{ form }}
 </table>
+<input type="submit" value="register" />
 </form>
 
 {% endblock %}
