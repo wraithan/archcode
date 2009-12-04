@@ -15,3 +15,5 @@ challenges they've submitted answers for.
 -Figure out how to hook news app in so it gets rendered on in the base.html 
 without having to mention it in the view... probably via middleware.
 -Write fabric script for deploying to the server
+-Markup in ideas and other forms.
+-Bug tracking solution (Trac? Redmine? Something that is 99% up.)
