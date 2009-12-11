@@ -55,6 +55,13 @@ SECRET_KEY = 'abcdefABCDEFG'
 # How long a user has, in days, to respond to the registration email.
 ACCOUNT_ACTIVATION_DAYS = 7
 
+# Email settings to use for GMail.
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'archlinux.code@gmail.com'
+EMAIL_HOST_PASSWORD = PM Wraithan for the password.
+EMAIL_PORT = 587
+
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
@@ -81,6 +88,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.admin',
     'django.contrib.contenttypes',
+    'django.contrib.humanize',
     'django.contrib.sessions',
     'django.contrib.sites',
     'challenge',
