@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     (r'^challenge/', include('archcode.challenge.urls')),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve',
         { 'document_root': relpath('media/') }),
+    (r'^accounts/profile/$', 'archcode.home.views.profile'),
     (r'^accounts/', include('registration.backends.default.urls')),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:

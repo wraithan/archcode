@@ -1,9 +1,11 @@
 {% extends "base.html" %}
-{% if form.errors %}
-<p>death</p>
-{% endif %}
+
 {% block content %}
-<form>
+
+{% if form.errors %}
+<p>Bad registration data</p>
+{% endif %}
+<form method="post">
 <table>
     {{ form }}
 </table>
