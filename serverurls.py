@@ -5,7 +5,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^$', 'archcode.home.views.index'),
     (r'^challenge/', include('archcode.challenge.urls')),
-    (r'^accounts/login/$', 'django.contrib.auth.views.login'),
+    (r'^accounts/profile/$', 'archcode.home.views.profile'),
+    (r'^accounts/', include('registration.backends.default.urls')),
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
