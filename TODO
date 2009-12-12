@@ -1,4 +1,3 @@
--Self registration for users.
 -Submitting of challenge ideas.
 -Voting on challenge ideas.
 -Submitting of challenge solutions.
@@ -16,4 +15,3 @@ challenges they've submitted answers for.
 without having to mention it in the view... probably via middleware.
 -Write fabric script for deploying to the server
 -Markup in ideas and other forms.
--Bug tracking solution (Trac? Redmine? Something that is 99% up.)
