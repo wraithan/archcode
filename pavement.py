@@ -8,6 +8,7 @@ easy_install = base + '/bin/easy_install'
 libraries = [
     ('django', ''),
     ('http://bitbucket.org/ubernostrum/django-registration/get/tip.zip', '-Z'),
+    ('http://bitbucket.org/andrewgodwin/south/get/stableish.zip', ''),
 ]
 options(
     virtualenv=Bunch(
