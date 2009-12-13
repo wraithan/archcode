@@ -21,14 +21,15 @@ def challenge_list(request):
         'title': title,
         'current_challenges': current_challenges,
         'past_challenges': past_challenges
-        })
+        }, context_instance=RequestContext(request))
 
 def challenge_details(request, challenge_id):
     title = "Challenge Details"
     challenge = get_object_or_404(Challenge, pk=challenge_id)
     return render_to_response('challenge/challenge_details.html', {
         'title': title,
-        'challenge': challenge })
+        'challenge': challenge
+        }, context_instance=RequestContext(request))
 
 def solution_list(request):
     title = 'Solutions'
@@ -36,14 +37,15 @@ def solution_list(request):
     return render_to_response('challenge/solution_list.html', {
         'title': title,
         'solutions': solutions,
-        })
+        }, context_instance=RequestContext(request))
 
 def solution_details(request, solution_id):
     title = "Solution Details"
     solution = get_object_or_404(Solution, pk=solution_id)
     return render_to_response('challenge/solution_details.html', {
         'title': title,
-        'solution': solution })
+        'solution': solution
+        }, context_instance=RequestContext(request))
 
 @login_required
 def solution_submit(request):
@@ -60,5 +62,6 @@ def solution_submit(request):
         form = SolutionForm()
     return render_to_response('challenge/solution_submit.html', {
         'title': title,
-        'form': form}, context_instance=RequestContext(request))
+        'form': form
+        }, context_instance=RequestContext(request))
 
