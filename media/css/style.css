@@ -74,7 +74,7 @@ span {
 }
 
 #menu li a:hover {
-    background-color: #256da8;
+    background-color: #1793d1;
 }
 
 #content {
@@ -134,28 +134,28 @@ span {
 #main a, #right p a {
     text-decoration: none;
     color: #256da8;
-    border-bottom: 1px dotted #256da8;
+    border-bottom: 1px dotted #1793d1;
     padding: 2px;
 }
 
 #main a:hover, #right p a:hover  {
     text-decoration: none;
     color: #fff;
-    background-color: #256da8;
+    background-color: #1793d1;
     padding: 2px;
 }
 
 #main img {
     background-color: #38a5ff;
     padding: 2px;
-    border: 1px solid #256da8;
+    border: 1px solid #1793d1;
 }
 
 .block {
     margin-bottom: 15px;
     border: 1px solid #38a5ff;
     background-color: #eee;
-    color: #256da8;
+    color: #1793d1;
 }
 
 #message {
@@ -234,7 +234,7 @@ span {
 }
 
 #footer a:hover {
-    color: #256da8;
+    color: #1793d1;
 }
 
 h1 {
@@ -263,7 +263,7 @@ h3 {
 
 h4 {
     font-size: 14px;
-    color: #256da8;
+    color: #1793d1;
     text-transform: uppercase;
     letter-spacing: -0.5px;
     }
