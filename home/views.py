@@ -8,7 +8,7 @@ def index(request):
 
     return render_to_response('home/index.html', {
         'title':                title,
-        })
+        }, context_instance=RequestContext(request))
     
 @login_required
 def profile(request):

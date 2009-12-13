@@ -1,10 +1,12 @@
 from datetime import datetime
 
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
+from django.template import RequestContext
 
 from archcode.challenge.models import Challenge, Solution
 from archcode.challenge.forms import SolutionForm
@@ -52,10 +54,11 @@ def solution_submit(request):
             object = form.save(commit=False)
             object.user = request.user
             object.save()
+            messages.success(request, 'Your solution has been successfully submitted.')
             return HttpResponseRedirect(reverse('challenge-solution-submit'))
     else:
         form = SolutionForm()
     return render_to_response('challenge/solution_submit.html', {
         'title': title,
-        'form': form})
+        'form': form}, context_instance=RequestContext(request))
 
