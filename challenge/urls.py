@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('archcode.challenge.views',
-    (r'^$', 'index', {}, 'challenge-index'),
-    (r'(?P<challenge_id>\d+)/$', 'details', {}, 'challenge-details'),
+    url(r'^$', 'index', {}, 'challenge-index'),
+    url(r'(?P<challenge_id>\d+)/$', 'details', {}, 'challenge-details'),
+    url(r'submit/solution/$', 'submit_solution', name='challenge-submit-solution'),
 )

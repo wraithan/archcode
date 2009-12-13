@@ -2,6 +2,9 @@
 from archcode.challenge.models import Challenge
 from archcode.challenge.forms import SolutionForm
 from datetime import datetime
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 
 title = "Challenges"
@@ -21,5 +24,15 @@ def details(request, challenge_id):
         'title': title,
         'challenge': challenge })
 
+@login_required
 def submit_solution(request):
-    pass
+    if request.method == 'POST':
+        form = SolutionForm(request.POST)
+        if form.is_valid():
+            object = form.save(commit=False)
+            object.user = request.user# User.objects.filter(id=request.user.id).objects
+            object.save()
+            return HttpResponseRedirect('/challenge/submit/solution/')
+    else:
+        form = SolutionForm()
+    return render_to_response('challenge/submit_solution.html', {'form':form})

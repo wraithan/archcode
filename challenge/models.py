@@ -30,6 +30,9 @@ class Language(models.Model):
     def __unicode__(self):
         return self.name
 
+    class Meta:
+        ordering = ('name',)
+
 class Solution(models.Model):
     language = models.ForeignKey(Language)
     source = models.TextField('Solution Source')
