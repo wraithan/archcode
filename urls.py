@@ -11,11 +11,7 @@ urlpatterns = patterns('',
         { 'document_root': relpath('media/') }),
     (r'^accounts/profile/$', 'archcode.home.views.profile'),
     (r'^accounts/', include('registration.backends.default.urls')),
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
-    # to INSTALLED_APPS to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
+    (r'^paste/', include('dpaste.urls')),
 )
 

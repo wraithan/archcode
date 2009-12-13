@@ -9,7 +9,11 @@ libraries = [
     ('django', ''),
     ('http://bitbucket.org/ubernostrum/django-registration/get/tip.zip', '-Z'),
     ('http://bitbucket.org/andrewgodwin/south/get/stableish.zip', ''),
+    ('Pygments', ''),
+    ('http://github.com/matthiask/django-mptt/zipball/master', '-Z'),
+    ('http://github.com/bartTC/django-paste/zipball/master', '-Z')
 ]
+
 options(
     virtualenv=Bunch(
         script_name='bootstrap.py',
