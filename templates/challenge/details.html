@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block challenge %}
-<h2><span class="label">Title: </span>{{ challenge.title }}</h2>
-    <h4><span class="label">Start: </span>{{ challenge.starts }}</h4>
-    <h4><span class="label">End: </span>{{ challenge.ends }}</h4>
+<h2><span class="label">Title:</span><span class="label-align">{{ challenge.title }}</span></h2>
+    <h4><span class="label">Start:</span><span class="label-align">{{ challenge.starts }}</span></h4>
+    <h4><span class="label">End:</span><span class="label-align">{{ challenge.ends }}</span></h4>
     <span class="label">Description:</span>
     <pre>{{ challenge.summary }}</pre>
 {% endblock %}
