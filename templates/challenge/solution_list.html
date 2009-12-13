@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if solutions %}
+        <ul>
+        {% for solution in solutions %}
+            <li><a href="{{ solution.get_absolute_url }}">{{ solution }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>no solutions are available.</p>
+    {% endif %}
+{% endblock %}
