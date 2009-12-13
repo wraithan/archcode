@@ -127,8 +127,7 @@ span {
     white-space: pre-wrap;
     color: #666;
     padding: 10px;
-    border-style: dotted;
-    border-width: 1px;
+    border: 1px dotted #ccc;
 }
 
 #main a, #right p a {
@@ -187,9 +186,9 @@ span {
 
 #right {
     position: absolute;
-    right: 40px;
+    right: 45px;
     top: 145px;
-    width: 165px;
+    width: 155px;
 }
 
 #right p {
