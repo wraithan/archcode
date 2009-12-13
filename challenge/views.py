@@ -1,7 +1,8 @@
 # Create your views here.
-from django.shortcuts import render_to_response, get_object_or_404
 from archcode.challenge.models import Challenge
+from archcode.challenge.forms import SolutionForm
 from datetime import datetime
+from django.shortcuts import render_to_response, get_object_or_404
 
 title = "Challenges"
 
@@ -19,3 +20,6 @@ def details(request, challenge_id):
     return render_to_response('challenge/details.html', {
         'title': title,
         'challenge': challenge })
+
+def submit_solution(request):
+    pass

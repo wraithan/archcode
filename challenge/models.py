@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from django.db import models
 from django.core.urlresolvers import reverse
+from django.contrib.auth.models import User
 
 CHALLENGE_STATUS_CHOICES = (
     ('NW', 'New'),
@@ -23,3 +24,17 @@ class Challenge(models.Model):
     def get_absolute_url(self):
         return reverse('challenge-details', args=[self.id,])
 
+class Language(models.Model):
+    name = models.CharField('Language Name', max_length = 30)
+
+    def __unicode__(self):
+        return self.name
+
+class Solution(models.Model):
+    language = models.ForeignKey(Language)
+    source = models.TextField('Solution Source')
+    challenge = models.ForeignKey(Challenge)
+    user = models.ForeignKey(User)
+
+    def __unicode__(self):
+        return self.user.username + ": " + self.challenge.title
