@@ -265,6 +265,11 @@ img.right {
     font-weight: bold;
 }
 
+.field-align {
+    color: #666;
+    display: block;
+}
+
 .label-align {
     position: absolute;
     left: 100px;
