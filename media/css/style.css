@@ -91,9 +91,6 @@ span {
 
 #content li {
     list-style: none;
-    background-image: url(/media/images/bullet.png);
-    background-repeat: no-repeat;
-    background-position: 0 3px;
     padding: 0 0 0 15px;
     margin: 10px 0 10px 0;
 }
@@ -267,6 +264,12 @@ img.right {
     text-transform: none;
     letter-spacing: normal;
     font-weight: bold;
+}
+
+.bullets {
+    background-image: url(/media/images/bullet.png);
+    background-repeat: no-repeat;
+    background-position: 0 3px;
 }
 
 .label-align {

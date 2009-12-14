@@ -16,7 +16,7 @@
     {% if past_challenges %}
         <ul>
         {% for challenge in past_challenges %}
-           <li><a href="{{ challenge.get_absolute_url }}">{{ challenge.title }}</a></li>
+           <li class="bullets"><a href="{{ challenge.get_absolute_url }}">{{ challenge.title }}</a></li>
         {% endfor %}
         </ul>
     {% else %}
