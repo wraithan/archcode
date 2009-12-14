@@ -6,7 +6,7 @@ base = path(os.path.abspath(os.path.dirname(__file__)))
 easy_install = base + '/bin/easy_install'
 
 libraries = [
-    ('django', ''),
+    ('http://github.com/django/django/zipball/master', ''),
     ('http://bitbucket.org/ubernostrum/django-registration/get/tip.zip', '-Z'),
     ('http://bitbucket.org/andrewgodwin/south/get/stableish.zip', ''),
     ('Pygments', ''),
