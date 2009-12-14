@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<p />
 {% if user.is_authenticated %}
 <p>{{ user.username }}! Here is a logout link just in case: <a href="{% url auth_logout %}">Logout</a></p>
 <p>Solved one of the challenges and want to show it off: <a href="{% url challenge-solution-submit %}">Submit it!</a></p>

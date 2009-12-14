@@ -18,12 +18,12 @@
 
             <div id="navigation">
                 <ul id="menu">
-                    <li><a href="/">home</a></li><li><a href="#">about</a></li><li><a href="/challenge">challenges</a></li><li><a href="#">contact</a></li>
+                    <li><a href="/">home</a></li><li><a href="#">about</a></li><li><a href="/challenge">challenges</a></li><li><a href="/paste">paste</a></li><li><a href="#">contact</a></li>
                 </ul>
             </div>
 
             {% if messages %}
-                <div class="block" id="message">
+                <div id="message">
                     {% for message in messages %}
                         {{ message }}<br />
                     {% endfor %}

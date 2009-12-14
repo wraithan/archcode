@@ -150,40 +150,6 @@ span {
     border: 1px solid #1793d1;
 }
 
-.block {
-    margin-bottom: 15px;
-    border: 1px solid #38a5ff;
-    background-color: #eee;
-    color: #1793d1;
-}
-
-#message {
-    color: #38a5ff;
-    width: 668px;
-    margin-top: 15px;
-    margin-left: 30px;
-    padding: 5px 15px 5px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    font-style: italic;
-}
-
-#quote {
-    background-image: url(/media/images/quote.png);
-    background-repeat: no-repeat;
-    background-position: 10px 10px;
-    padding: 15px;
-    text-indent: 35px;
-    font-size: 14px;
-    font-style: italic;
-}
-
-#code {
-    padding: 15px;
-    font-family: monospace;
-    font-size: 12px;
-}
-
 #right {
     position: absolute;
     right: 45px;
@@ -272,6 +238,20 @@ h4 {
     margin: 0;
 }
 
+#message {
+    color: #38a5ff;
+    width: 668px;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    border: 1px solid #38a5ff;
+    background-color: #eee;
+    padding: 5px 15px 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+}
+
 img.left {
     float: left;
     margin: 0 15px 5px 0;
@@ -292,4 +272,27 @@ img.right {
 .label-align {
     position: absolute;
     left: 100px;
+}
+
+.quote {
+    margin-bottom: 15px;
+    border: 1px solid #38a5ff;
+    background-color: #eee;
+    background-image: url(/media/images/quote.png);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    padding: 15px;
+    text-indent: 35px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.code {
+    margin-bottom: 15px;
+    border: 1px solid #38a5ff;
+    background-color: #eee;
+    color: #1793d1;
+    padding: 15px;
+    font-family: monospace;
+    font-size: 12px;
 }
