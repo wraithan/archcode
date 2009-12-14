@@ -2,7 +2,7 @@
 
 {% block content %}
 <p>{{ form.errors }}</p>
-<form method="post" action="{% url challenge-submit-solution %}">
+<form method="post" action="{% url challenge-solution-submit %}">{% csrf_token %}
 <table>
     <tr><th>{{ form.challenge.label_tag }}</th><td>{{ form.challenge }}</td></tr>
     <tr><th>{{ form.langauge.label_tag }}</th><td>{{ form.language }}</td></tr>

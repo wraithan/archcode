@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block challenge %}
+<h2><span class="label">Challenge:</span>{{ solution.challenge.title }}</h2>
+    <h4><span class="label">Language:</span>{{ solution.language.name }}</h4>
+    <h4><span class="label">Submitter:</span>{{ solution.user }}</h4>
+    <span class="label">Source:</span>
+    <p id='code'>{{ solution.source }}</p>
+{% endblock %}

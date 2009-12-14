@@ -41,3 +41,6 @@ class Solution(models.Model):
 
     def __unicode__(self):
         return self.user.username + ": " + self.challenge.title
+
+    def get_absolute_url(self):
+        return reverse('challenge-solution-details', args=[self.id,])
