@@ -91,7 +91,6 @@ span {
 
 #content li {
     list-style: none;
-    padding: 0 0 0 15px;
     margin: 10px 0 10px 0;
 }
 
@@ -266,15 +265,16 @@ img.right {
     font-weight: bold;
 }
 
-.bullets {
-    background-image: url(/media/images/bullet.png);
-    background-repeat: no-repeat;
-    background-position: 0 3px;
-}
-
 .label-align {
     position: absolute;
     left: 100px;
+}
+
+.bullets {
+    padding: 0 0 0 15px;
+    background-image: url(/media/images/bullet.png);
+    background-repeat: no-repeat;
+    background-position: 0 3px;
 }
 
 .quote {
