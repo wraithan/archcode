@@ -1,7 +1,8 @@
 from datetime import datetime, timedelta
-from django.db import models
-from django.core.urlresolvers import reverse
+
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
+from django.db import models
 
 CHALLENGE_STATUS_CHOICES = (
     ('NW', 'New'),
@@ -9,12 +10,13 @@ CHALLENGE_STATUS_CHOICES = (
     ('CP', 'Completed'),
 )
 
+
 class Challenge(models.Model):
-    title = models.CharField('Challenge Title', max_length = 200)
-    starts = models.DateTimeField('Start Date', default = datetime.now)
-    ends = models.DateTimeField('End Date', default = lambda: datetime.now() +
+    title = models.CharField('Challenge Title', max_length=200)
+    starts = models.DateTimeField('Start Date', default=datetime.now)
+    ends = models.DateTimeField('End Date', default=lambda: datetime.now() +
         timedelta(days=7))
-    status = models.CharField('Challenge Status', max_length = 2,
+    status = models.CharField('Challenge Status', max_length=2,
         choices=CHALLENGE_STATUS_CHOICES)
     summary = models.TextField('Challenge Details')
 
@@ -22,16 +24,18 @@ class Challenge(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('challenge-details', args=[self.id,])
+        return reverse('challenge-details', args=[self.id])
+
 
 class Language(models.Model):
-    name = models.CharField('Language Name', max_length = 30)
+    name = models.CharField('Language Name', max_length=30)
 
     def __unicode__(self):
         return self.name
 
     class Meta:
         ordering = ('name',)
+
 
 class Solution(models.Model):
     language = models.ForeignKey(Language)
@@ -43,4 +47,4 @@ class Solution(models.Model):
         return self.user.username + ": " + self.challenge.title
 
     def get_absolute_url(self):
-        return reverse('challenge-solution-details', args=[self.id,])
+        return reverse('challenge-solution-details', args=[self.id])

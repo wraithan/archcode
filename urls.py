@@ -8,10 +8,9 @@ urlpatterns = patterns('',
     (r'^$', 'archcode.home.views.index'),
     (r'^challenge/', include('archcode.challenge.urls')),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve',
-        { 'document_root': relpath('media/') }),
+        {'document_root': relpath('media/')}),
     (r'^accounts/profile/$', 'archcode.home.views.profile'),
     (r'^accounts/', include('registration.backends.default.urls')),
     (r'^admin/', include(admin.site.urls)),
     (r'^paste/', include('dpaste.urls')),
 )
-

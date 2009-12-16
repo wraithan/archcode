@@ -11,8 +11,7 @@ libraries = [
     ('http://bitbucket.org/andrewgodwin/south/get/stableish.zip', ''),
     ('Pygments', ''),
     ('http://github.com/matthiask/django-mptt/zipball/master', '-Z'),
-    ('http://github.com/bartTC/django-paste/zipball/master', '-Z')
-]
+    ('http://github.com/bartTC/django-paste/zipball/master', '-Z')]
 
 options(
     virtualenv=Bunch(

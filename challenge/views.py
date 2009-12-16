@@ -12,40 +12,44 @@ from archcode.challenge.models import Challenge, Solution
 from archcode.challenge.forms import SolutionForm
 
 
-
 def challenge_list(request):
     title = "Challenges"
-    current_challenges = Challenge.objects.exclude(ends__lte=datetime.now).filter(starts__lte=datetime.now)
+    current_challenges = Challenge.objects.exclude(ends__lte=datetime.now) \
+        .filter(starts__lte=datetime.now)
     past_challenges = Challenge.objects.filter(ends__lte=datetime.now)
     return render_to_response('challenge/challenge_list.html', {
         'title': title,
         'current_challenges': current_challenges,
-        'past_challenges': past_challenges
-        }, context_instance=RequestContext(request))
+        'past_challenges': past_challenges},
+        context_instance=RequestContext(request))
+
 
 def challenge_details(request, challenge_id):
     title = "Challenge Details"
     challenge = get_object_or_404(Challenge, pk=challenge_id)
     return render_to_response('challenge/challenge_details.html', {
         'title': title,
-        'challenge': challenge
-        }, context_instance=RequestContext(request))
+        'challenge': challenge},
+        context_instance=RequestContext(request))
+
 
 def solution_list(request):
     title = 'Solutions'
     solutions = Solution.objects.all()
     return render_to_response('challenge/solution_list.html', {
         'title': title,
-        'solutions': solutions,
-        }, context_instance=RequestContext(request))
+        'solutions': solutions},
+        context_instance=RequestContext(request))
+
 
 def solution_details(request, solution_id):
     title = "Solution Details"
     solution = get_object_or_404(Solution, pk=solution_id)
     return render_to_response('challenge/solution_details.html', {
         'title': title,
-        'solution': solution
-        }, context_instance=RequestContext(request))
+        'solution': solution},
+        context_instance=RequestContext(request))
+
 
 @login_required
 def solution_submit(request):
@@ -56,12 +60,12 @@ def solution_submit(request):
             object = form.save(commit=False)
             object.user = request.user
             object.save()
-            messages.success(request, 'Your solution has been successfully submitted.')
+            messages.success(request,
+                    'Your solution has been successfully submitted.')
             return HttpResponseRedirect(reverse('challenge-solution-submit'))
     else:
         form = SolutionForm()
     return render_to_response('challenge/solution_submit.html', {
         'title': title,
-        'form': form
-        }, context_instance=RequestContext(request))
-
+        'form': form},
+        context_instance=RequestContext(request))
